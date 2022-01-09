@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@types/node": "^17.0.8",
+    "cheerio": "^1.0.0-rc.10",
     "csv-writer": "^1.6.0",
     "node-fetch": "^2.6.6"
   }
