@@ -1,7 +1,7 @@
 /**
  * That is the thing that we want back
  */
-interface ISearchResult {
+export interface ISearchResult {
     link: string;
     name: string;
     description: string;

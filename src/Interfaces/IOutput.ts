@@ -1,6 +1,8 @@
+import { ISearchResult } from "./ISearchResult"
+
 /**
  * We have different output formats
  */
-interface IOutput {
+export interface IOutput {
     outputData(searchResults: ISearchResult[]): void;
 }
