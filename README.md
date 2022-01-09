@@ -1,18 +1,21 @@
-# write a web scraper
+# write a price search engine
 
 There are the following additional common rules that apply:
 https://github.com/stho32/Collection-Of-Challenges/blob/master/Common-Requirements.md
 
 ## Requirements
 
-- [ ] (R001) the scraper has the option to scrape a website with no authentication
-- [ ] (R002) the scraper has the option to scrape a website with basic authentication
-- [ ] (R003) the scraper has the option to scrape a website using forms authentication (cookies)
-- [ ] (R004) there is a way to configure what data you want extracted
-- [ ] (R005) the tool returns the information in various formats
-  - [ ] (R006) json
-  - [ ] (R007) csv
+- [X] (R001) there are products and prices
+- [X] (R002) there are price search engines
+- [ ] (R003) for each item, that you want to check, there are several search engines used for
+  - [ ] (R004) Amazon
+  - [ ] (R005) EBay
+  - [ ] (R006) MediaMarkt
+  - [ ] (R007) Saturn
 
+- [ ] (R008) the tool returns the information in various formats
+  - [ ] (R009) json
+  - [ ] (R010) csv
 
 ## Variants
 
