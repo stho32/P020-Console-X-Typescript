@@ -6,6 +6,6 @@ export class ConsoleOutput implements IOutput {
         searchResults.forEach(searchResult => {
             console.log(`${searchResult.name} ${searchResult.price}`);
         });
-        
+
     }
 }

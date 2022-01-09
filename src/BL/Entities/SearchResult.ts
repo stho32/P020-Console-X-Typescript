@@ -8,7 +8,7 @@ export class SearchResult implements ISearchResult {
     rating: number;
     price: number;
 
-    constructor(link : string, name: string, description: string, availability:boolean, rating:number, price:number) {
+    constructor(link: string, name: string, description: string, availability: boolean, rating: number, price: number) {
         this.link = link;
         this.name = name;
         this.description = description;

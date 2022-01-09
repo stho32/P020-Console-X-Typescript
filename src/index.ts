@@ -7,7 +7,7 @@ const searchResults = [
 ];
 
 //const output : interfaces.IOutput = new bl.ConsoleOutput();
-const output : interfaces.IOutput = new bl.CsvOutput("test.csv");
-//const output : interfaces.IOutput = new bl.JSONOutput();
+// const output: interfaces.IOutput = new bl.CsvOutput("test.csv");
+const output: interfaces.IOutput = new bl.JSONOutput("test.json");
 
 output.outputData(searchResults);

@@ -13,9 +13,9 @@ https://github.com/stho32/Collection-Of-Challenges/blob/master/Common-Requiremen
   - [ ] (R006) MediaMarkt
   - [ ] (R007) Saturn
 
-- [ ] (R008) the tool returns the information in various formats
-  - [ ] (R009) json
-  - [ ] (R010) csv
+- [X] (R008) the tool returns the information in various formats
+  - [X] (R009) json
+  - [X] (R010) csv
 
 ## Variants
 
