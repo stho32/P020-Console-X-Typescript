@@ -7,22 +7,23 @@ export class AmazonPriceSearchEngine extends SearchEngineBase {
         const baseUrl = "https://www.amazon.de";
         const $ = await this.requestWebsite(`${baseUrl}/s?k=`, searchTerm);
 
-        let titles : any[] = this.collectText($, ".s-title-instructions-style");
-        let prices : any[] = this.collectText($, ".s-price-instructions-style");;
-        let links : any[] = this.collectLinks($, ".a-link-normal[title='product-image']", baseUrl);
-        let ratings : any[] = this.collectText($, ".a-icon-alt");
+        let titles: any[] = this.collectText($, ".s-title-instructions-style");
+        let prices: any[] = this.collectText($, ".s-price-instructions-style");;
+        let links: any[] = this.collectLinks($, ".a-link-normal[title='product-image']", baseUrl);
+        let ratings: any[] = this.collectText($, ".a-icon-alt");
 
-        let result : ISearchResult[] = [];
+        let result: ISearchResult[] = [];
 
-        titles.forEach((title,index)  => {
+        titles.forEach((title, index) => {
             result.push(new SearchResult(
+                this.constructor.name,
                 links[index],
                 title,
                 this.grabFirstPartAsNumber(ratings[index]),
                 this.grabFirstPartAsNumber(prices[index])
             ));
         });
-        
+
         return result;
     }
 }
