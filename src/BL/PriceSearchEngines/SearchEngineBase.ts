@@ -16,4 +16,28 @@ export abstract class SearchEngineBase implements IPriceSearchEngine {
 
         return $;
     }
+
+    protected collectText($ : any, selector : string) {
+        let result : any[] = [];
+
+        $(selector).each(function (index:any, value:any) {
+            result.push($(value).text().trim());
+        });
+
+        return result;
+    }
+
+    protected collectLinks($ : any, selector : string, baseUrl : string) {
+        let result : any[] = [];
+
+        $(selector).each(function (index:any, value:any) {
+            result.push(baseUrl + $(value).attr("href").trim());
+        });
+
+        return result;
+    }
+
+    protected grabFirstPartAsNumber(value : string) : any {
+        return Number(value.split(/\s/)[0].replace(",", "."));
+    }
 }
