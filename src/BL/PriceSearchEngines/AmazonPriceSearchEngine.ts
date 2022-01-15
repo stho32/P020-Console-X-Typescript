@@ -8,7 +8,7 @@ export class AmazonPriceSearchEngine extends SearchEngineBase {
         const $ = await this.requestWebsite(`${baseUrl}/s?k=`, searchTerm);
 
         let titles: any[] = this.collectText($, ".s-title-instructions-style");
-        let prices: any[] = this.collectText($, ".s-price-instructions-style");;
+        let prices: any[] = this.collectText($, ".a-price-whole");;
         let links: any[] = this.collectLinks($, ".a-link-normal[title='product-image']", baseUrl);
         let ratings: any[] = this.collectText($, ".a-icon-alt");
 

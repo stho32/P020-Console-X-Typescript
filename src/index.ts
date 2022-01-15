@@ -4,8 +4,8 @@ const searchEngines = new bl.SearchEngineList(
     [new bl.AmazonPriceSearchEngine()]
 );
 
-(async() => {
-    var searchResults = await searchEngines.search("firestack");
+(async () => {
+    var searchResults = await searchEngines.search("GTX 1060");
     console.log(searchResults);
 })();
 
