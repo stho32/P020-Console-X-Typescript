@@ -6,5 +6,5 @@ import { ISearchResult } from "./ISearchResult"
  */
 
 export interface IPriceSearchEngine {
-    search(searchTerm: string): ISearchResult[];
+    search(searchTerm: string): Promise<ISearchResult[]>;
 }

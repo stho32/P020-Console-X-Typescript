@@ -1,7 +1,12 @@
 import * as bl from "./BL/index"
 import * as interfaces from "./Interfaces/index"
-const fetch = require("node-fetch");
-import { writeFileSync } from "fs";
+
+const amazonPriceSearchEngine = new bl.AmazonPriceSearchEngine();
+
+(async() => {
+    var searchResults = await amazonPriceSearchEngine.search("firestack");
+    console.log(searchResults);
+})();
 
 // const searchResults = [
 //     new bl.SearchResult("google", "Schnapper", "Ein Schnapper schnappt sich schnappich.", true, 5, 5),
@@ -15,8 +20,8 @@ import { writeFileSync } from "fs";
 // output.outputData(searchResults);
 
 
-(async () => {
-    const req = await fetch("https://www.amazon.de/s?k=firestick", { headers: { "User-Agent": "Mozilla/5.0 (Linux; U; Android 2.2; de-de; HTC Magic Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" } });
-    const res = await req.text();
-    writeFileSync("test.html", res, "utf8")
-})()
+// (async () => {
+//     const req = await fetch("https://www.amazon.de/s?k=firestick", { headers: { "User-Agent": "Mozilla/5.0 (Linux; U; Android 2.2; de-de; HTC Magic Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" } });
+//     const res = await req.text();
+//     writeFileSync("test.html", res, "utf8")
+// })()
