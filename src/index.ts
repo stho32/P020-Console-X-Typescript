@@ -1,10 +1,11 @@
 import * as bl from "./BL/index"
-import * as interfaces from "./Interfaces/index"
 
-const amazonPriceSearchEngine = new bl.AmazonPriceSearchEngine();
+const searchEngines = new bl.SearchEngineList(
+    [new bl.AmazonPriceSearchEngine()]
+);
 
 (async() => {
-    var searchResults = await amazonPriceSearchEngine.search("firestack");
+    var searchResults = await searchEngines.search("firestack");
     console.log(searchResults);
 })();
 
