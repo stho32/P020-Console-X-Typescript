@@ -4,8 +4,6 @@
 export interface ISearchResult {
     link: string;
     name: string;
-    description: string;
-    availability: boolean;
     rating: number;
     price: number;
 }
